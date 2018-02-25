@@ -8,6 +8,7 @@
             html, body {
                 margin: 0;
                 border: none;
+                padding: 0;
                 background: #FFF;
                 font: 22px/1.5em Monospace;
             }
@@ -42,6 +43,9 @@
             strong em {
                 text-transform: uppercase;
                 font-style: normal;
+            }
+            header h1 {
+                margin: 0;
             }
 
             /**
@@ -83,7 +87,7 @@
             header .h-card {
                 text-align: center;
             }
-            header .h-card time, header .h-card .p-street-address {
+            header .h-card .p-street-address {
                 display: block;
             }
             header .h-card p {
@@ -109,68 +113,64 @@
         </style>
     </head>
     <body>
-        <main>
-            <header>
-                <img id="logo" src="img/logo.bw.368x368.gif" alt="" height="350" />
-                <nav>
-                    <ul>
-                        <li><a href="#io-programs" title="">Programs</a></li>
-                        <li><a href="#io-ethos" title="">Ethos</a></li>
-                        <li><a href="#io-calendar" title="">Calendar</a></li>
-                        <!-- TODO: Set contact info. -->
-                        <li><a href="#" title="">Get in touch</a></li>
-                    </ul>
-                </nav>
+        <header>
+            <h1><img id="logo" src="img/logo.bw.368x368.gif" alt="I/O Web Resource" height="350" /></h1>
+            <nav>
+                <ul>
+                    <li><a href="#io-programs" title="What to expect from I/O events.">Programs</a></li>
+                    <li><a href="#io-ethos" title="Our perspective and sensibilities.">Ethos</a></li>
+                    <li><a href="#io-calendar" title="When and where our events happen.">Calendar</a></li>
+                    <!-- TODO: Set contact info. -->
+                    <li><a href="#" title="Contact I/O event organizers.">Get in touch</a></li>
+                </ul>
+            </nav>
 
-                <div class="h-card">
-                    <p>
-                        <time datetime="2018">Sundays @ 2&ndash;6pm</time>
-                        <span class="p-name p-org">The Footlight</span>
-                    </p>
-                    <address class="h-adr">
-                        <span class="p-street-address">465 Seneca Avenue</span>
-                        <span class="p-extended-address">Ridgewood</span>
-                        <span class="p-locality">Queens</span>, <span class="p-region">NY</span> <span class="p-postal-code">11385</span>
-                        <span class="p-country-name">United States</span>
-                    </address>
-                </div><!-- .h-card -->
-            </header>
+            <div class="h-card">
+                <p>Sundays @ <time datetime="14:00">2</time>&ndash;<time datetime="18:00">6pm</time></p>
+                <p class="p-name p-org">The Footlight</p>
+                <address class="h-adr">
+                    <span class="p-street-address">465 Seneca Avenue</span>
+                    <span class="p-extended-address">Ridgewood</span>
+                    <span class="p-locality">Queens</span>, <span class="p-region">NY</span> <span class="p-postal-code">11385</span>
+                    <span class="p-country-name">United States</span>
+                </address>
+            </div><!-- .h-card -->
+        </header>
 
-            <div id="MainColumn">
-                <section id="io-intro">
-                    <h1>Introduction</h1>
-                    <p><strong>I/O</strong> is an <strong>autonomous technology project</strong> connecting grassroots organizations, nonprofits, and community members with free resources on technology, such as info sessions, educational resources, and workshops.</p>
-                    <p>Each week, we build space for individuals and small organizations to become more aware of the power in their personal devices, and to practice becoming more competent in utilizing that power for the betterment and autonomization of <strong>their own lives and their community</strong>.</p>
-                    <p><strong>All of our workshops are free to attend, with a suggested donation of $10.</strong></p>
-                    <p>Here you will find links to helpful resources, as well as instructions on how to set up a calendar to stay subscribed to our events.</p>
-                </section>
+        <main id="MainColumn" role="main">
+            <section id="io-intro">
+                <h2>Introduction</h2>
+                <p><strong>I/O</strong> is an <strong>autonomous technology project</strong> connecting grassroots organizations, nonprofits, and community members with free resources on technology, such as info sessions, educational resources, and workshops.</p>
+                <p>Each week, we build space for individuals and small organizations to become more aware of the power in their personal devices, and to practice becoming more competent in utilizing that power for the betterment and autonomization of <strong>their own lives and their community</strong>.</p>
+                <p><strong>All of our workshops are free to attend, with a suggested donation of $10.</strong></p>
+                <p>Here you will find links to helpful resources, as well as instructions on how to set up a calendar to stay subscribed to our events.</p>
+            </section>
 
-                <section id="io-programs">
-                    <h1>Our Programs</h1>
-                    <p>We host programs <strong>(nearly) every Sunday from 2-6pm</strong> at <strong>The Footlight</strong> at <strong>465 Seneca Ave, Ridgewood, NY 11385</strong>. We trade off between programming that is generally oriented towards Individuals (I) and programming that is generally oriented towards organizations (O) or collectives.</p>
-                    <p>Of course, anyone can attend either type of gathering &mdash; this distinction is made only to help you scope what you would like to attend, and the things you would like to learn. When the topic appeals to both, the event will be marked "I/O."</p>
-                </section>
+            <section id="io-programs">
+                <h2>Our Programs</h2>
+                <p>We host programs <strong>(nearly) every Sunday from 2-6pm</strong> at <strong>The Footlight</strong> at <strong>465 Seneca Ave, Ridgewood, NY 11385</strong>. We trade off between programming that is generally oriented towards Individuals (I) and programming that is generally oriented towards organizations (O) or collectives.</p>
+                <p>Of course, anyone can attend either type of gathering &mdash; this distinction is made only to help you scope what you would like to attend, and the things you would like to learn. When the topic appeals to both, the event will be marked "I/O."</p>
+            </section>
 
-                <section id="io-ethos">
-                    <h1>Our Ethics</h1>
-                    <p>In computing, I/O stands for "input/output," and is used regularly across a variety of contexts, but almost always refers to some kind of exchange between external devices and internal devices, or, moreover, between machines and humans. It is this very exchange we concern ourselves with.</p>
-                    <p>Io is also the name of Jupiter's innermost moon, named after a mortal who befriends imprisoned Prometheus in Greek mythology, and whose descendent, Heracles, eventually frees him.</p>
-                    <p>Our programs are <strong><em>not</em></strong> part of a "bootcamp" or coding school.</p> 
-                    <p>We are <strong><em>not</em></strong> recruiters. We actively <strong>discourage</strong> anyone from getting into the so-called "Tech Industry."</p>
-                    <p>We are anti-technocapitalist. Our ethics place us <strong>staunchly and clearly</strong> against "Adtech" and "Fintech" and Silicon Valley.</p>
-                    <p>We <strong><em>do</em></strong> believe technology is <strong>intangible earth</strong>, with which we can and should have an earthly relationship. It <strong><em>is</em></strong> power that may be harnessed through holistic methods by individuals and their networks for <strong>the empowerment of oneself and of one's  actual communities</strong>.</p>
-                    <p>Our approach stands in contrast to <strong>sterility, stagnancy, and authoritativeness</strong> by being <strong>participatory, flexible, and adaptive.</strong></p>
-                    <p>If you work in the Tech Industry, please be advised that our ideology is <strong>directly hostile to Silicon Valley profit motives.</strong></p>
-                    <p>We have a strict <strong>no-tolerance policy</strong> against bigotry of any kind. Racism, queerphobia, transphobia, sexism, or any kind of similarly awful behavior will result in <strong>immediate removal from the venue</strong> and you will not be asked back. Starting arguments that hijack the experience of others or make other people feel less able to learn will result in the same, and this includes being condescending to others.</p>
-                </section>
+            <section id="io-ethos">
+                <h2>Our Ethics</h2>
+                <p>In computing, I/O stands for "input/output," and is used regularly across a variety of contexts, but almost always refers to some kind of exchange between external devices and internal devices, or, moreover, between machines and humans. It is this very exchange we concern ourselves with.</p>
+                <p>Io is also the name of Jupiter's innermost moon, named after a mortal who befriends imprisoned Prometheus in Greek mythology, and whose descendent, Heracles, eventually frees him.</p>
+                <p>Our programs are <strong><em>not</em></strong> part of a "bootcamp" or coding school.</p> 
+                <p>We are <strong><em>not</em></strong> recruiters. We actively <strong>discourage</strong> anyone from getting into the so-called "Tech Industry."</p>
+                <p>We are anti-technocapitalist. Our ethics place us <strong>staunchly and clearly</strong> against "Adtech" and "Fintech" and Silicon Valley.</p>
+                <p>We <strong><em>do</em></strong> believe technology is <strong>intangible earth</strong>, with which we can and should have an earthly relationship. It <strong><em>is</em></strong> power that may be harnessed through holistic methods by individuals and their networks for <strong>the empowerment of oneself and of one's  actual communities</strong>.</p>
+                <p>Our approach stands in contrast to <strong>sterility, stagnancy, and authoritativeness</strong> by being <strong>participatory, flexible, and adaptive.</strong></p>
+                <p>If you work in the Tech Industry, please be advised that our ideology is <strong>directly hostile to Silicon Valley profit motives.</strong></p>
+                <p>We have a strict <strong>no-tolerance policy</strong> against bigotry of any kind. Racism, queerphobia, transphobia, sexism, or any kind of similarly awful behavior will result in <strong>immediate removal from the venue</strong> and you will not be asked back. Starting arguments that hijack the experience of others or make other people feel less able to learn will result in the same, and this includes being condescending to others.</p>
+            </section>
 
-                <section id="io-calendar">
-                    <h1>Calendar</h1>
-                    <p>The best way to keep informed about our programs is to subscribe to our calendar.</p>
-                    <p><a href="https://tech-autonomy.com/calendar">Click here for instructions on syncing our calendar with your device.</a></p>
-                    <p><a href="https://oasis.sandstorm.io/shared/ysY5zjj9fbjfwr8smiQ_IQL8jmY2uqyR_65PhNd5wU3">Our Calendar</a></p>
-                </section>
-            </div><!-- #MainColumn -->
-        </main>
+            <section id="io-calendar">
+                <h2>Calendar</h2>
+                <p>The best way to keep informed about our programs is to subscribe to our calendar.</p>
+                <p><a href="https://tech-autonomy.com/calendar">Click here for instructions on syncing our calendar with your device.</a></p>
+                <p><a href="https://oasis.sandstorm.io/shared/ysY5zjj9fbjfwr8smiQ_IQL8jmY2uqyR_65PhNd5wU3">Our Calendar</a></p>
+            </section>
+        </main><!-- #MainColumn -->
     </body>
 </html>
