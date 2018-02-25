@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="charset" content="UTF-8" />
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>I/O Web Resource</title>
         <style>
+ 
             html, body {
                 margin: 0;
                 border: none;
                 padding: 0;
                 background: #FFF;
-                font: 22px/1.5em Monospace;
+                font: 22px/1.5em "Quicksand-Light", Monospace;
+            }
+            @font-face { 
+                font-family: "Quicksand-Light";
+                src: url("fonts/Quicksand-Light.ttf");
             }
 
             /**
@@ -19,9 +24,8 @@
             #MainColumn {
                 width: 60%;
                 margin: 3em auto 0;
-                text-align: justify;
+                text-align: left;
             }
-            #io-intro h1 { display: none; }
 
             /**
              * @group Headings.
@@ -32,13 +36,14 @@
             } 
             h1 {
                 font-size: 40px;
-                margin-top: 2em;
+                margin-top: 3em;
             }
             h2 {
-                font-size: 40px;
+                font-size: 30px;
+                margin-top: 2em;
             } 
             h3 {
-                font-size: 30px;
+                font-size: 15px;
             } 
             strong em {
                 text-transform: uppercase;
@@ -63,7 +68,7 @@
              */
             nav ul {
                 margin: 0;
-                padding: 0;
+                padding: 2.5em;
                 text-align: center;
             }
             nav ul li {
