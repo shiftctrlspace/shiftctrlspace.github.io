@@ -4,35 +4,33 @@
         <title>I/O Web Resource</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
         <meta name="msapplication-config" content="img/browserconfig.xml" />
-        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <link rel="manifest" href="img/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+        <link rel="manifest" href="img/manifest.json" />
         <style>
+            /**
+             * @group Background.
+             */
             html, body {
                 margin: 0;
                 border: none;
                 padding: 0;
                 background: #FFF;
-                font: 22px/1.5em "D-DIN", Monospace;
-            }
-            @font-face {
-                font-family: "D-DIN";
-                src: url("fonts/D-DIN.ttf");
             }
             ul, ol {
                 margin: 0;
@@ -57,8 +55,15 @@
             }
 
             /**
-             * @group Headings and Typography.
+             * @group Typography.
              */
+            @font-face {
+                font-family: "D-DIN";
+                src: url("fonts/D-DIN.ttf");
+            }
+            html, body {
+                font: 22px/1.5em "D-DIN", Monospace;
+            }
             h1, h2, h3 {
                 color: #000;
                 text-align: center;
@@ -81,15 +86,15 @@
                 display: block;
                 font-weight: normal;
             }
-            strong em {
-                text-transform: uppercase;
-                font-style: normal;
-            }
             footer ol {
                 list-style-type: none;
             }
             footer ol a {
                 text-transform: capitalize;
+            }
+            strong em {
+                text-transform: uppercase;
+                font-style: normal;
             }
 
             /**
@@ -111,7 +116,7 @@
             nav ul li {
                 display: inline;
                 padding: 0 30px;
-                border-left: 1px solid black;
+                border-left: 1px solid #000;
             }
             nav ul li:first-child {
                 border: none;
@@ -142,9 +147,6 @@
                 margin-bottom: 0;
             }
 
-            /**
-             * @group ANIMATIONS.
-             */
             /**
              * @group Logo animation.
              */
@@ -189,41 +191,48 @@
                 <h2>What is I/O?</h2>
                 <p><strong>I/O</strong> is an <strong>autonomous technology project</strong>. We connect grassroots organizations, nonprofits, and community members with free resources on technology, including info sessions, educational materials, and workshops.</p>
                 <p>Each week, we set a space where individuals and small organizations become more aware of the power in their everyday tech and personal devices, and practice utilizing that power for the betterment of <strong>their lives and communities</strong>.</p>
-                <p><strong>Our events are free to attend, with a suggested donation of $10.</strong></p>
-                <p>Here you will find links to helpful resources, as well as <a href="#io-calendar">instructions on how to set up a calendar</a> to stay subscribed to our events.</p>
+                <p>Our events are <strong>free to attend, with a suggested donation of $10</strong>.</p>
+                <p>Here you will find links to helpful resources, as well as <a href="#io-calendar">instructions on how to subscribe to our calendar of events</a>.</p>
             </section>
 
             <section id="io-programs">
                 <h2>Our Programs</h2>
                 <p>We host programs <strong>(nearly) every Sunday from <time datetime="14:00">2</time>&ndash;<time datetime="18:00">6pm</time></strong> at <a href="https://www.thefootlightbar.nyc/">The Footlight</a>, located at  <a href="https://www.openstreetmap.org/search?query=465%20Seneca%20Avenue%2C%20Ridgewood%2C%20Queens%2C%20NY%2011385">465 Seneca Avenue in Ridgewood, Queens, New York</a>. We trade off between programming that is generally oriented towards Individuals (I) and programming that is generally oriented towards organizations (O) or collectives.</p>
-                <p>Of course, anyone can attend either type of gathering &mdash; this distinction is made only to help you scope what you would like to attend, and the things you would like to learn. When the topic appeals to both, the event will be marked "I/O."</p>
+                <p>Of course, anyone can attend either type of gathering &mdash; this distinction is made only to help you scope what you would like to attend, and the things you would like to learn. When the topic appeals to both, the event will be marked &ldquo;I/O.&rdquo;</p>
             </section>
 
             <section id="io-ethos">
                 <h2>Our Ethos</h2>
-                <p>In computing, I/O stands for "input/output," and is used regularly across a variety of contexts, but almost always refers to some kind of exchange between external devices and internal devices, or, moreover, between machines and humans. It is this very exchange we concern ourselves with.</p>
-                <p>Io is also the name of Jupiter's innermost moon. The moon was named after a mortal figure in Greek mythology, who befriends imprisoned Prometheus, and whose descendent, Heracles, eventually frees him.</p>
-                <p>Our programs are <strong><em>not</em></strong> part of a "bootcamp" or coding school.</p>
-                <p>We are <strong><em>not</em></strong> recruiters. We actively discourage anyone from getting into the so-called "Tech Industry."</p>
-                <p>We are anti-technocapitalists, solarpunks, and radical technologists. Our ethics place us <strong>against</strong> "Adtech," "Fintech," and Silicon Valley.</p>
-                <p>We <strong><em>do</em></strong> believe technology is <strong>an intangible earth</strong>, with which we can and should have an earthly relationship. It <strong><em>is</em></strong> power that may be harnessed through holistic methods by individuals and their networks for <strong>the empowerment of oneself and of one's  actual communities</strong>.</p>
-                <p>Our approach stands in contrast to <strong>isolationism, sterility, and authoritativeness</strong> by being <strong>participatory, flexible, and adaptive.</strong></p>
-                <p>If you work in the Tech Industry, please be advised that our ideology is <strong>hostile to Tech Industry profit motives.</strong></p>
-                <p>We have a strict <strong>no-tolerance policy</strong> against bigotry of any kind. Racism, queerphobia, transphobia, sexism, or any kind of similarly awful behavior will result in immediate removal from the venue and you will not be asked back. Starting arguments that hijack the experience of others or make other people feel less able to learn will result in the same, and this includes being condescending to others.</p>
+                <p>In computing, <dfn>I/O</dfn> stands for &ldquo;input/output,&rdquo; and is used regularly across a variety of contexts, but most often refers to some kind of exchange between external devices and internal devices, or, moreover, between machines and humans. It is this very exchange we concern ourselves with. "Io" is also the name of Jupiter's innermost moon. The moon was named after a mortal figure in Greek mythology, who befriends imprisoned Prometheus, and whose descendent, Heracles, eventually frees him.</p>
+                <p>Our programs are <strong><em>not</em></strong> part of a &ldquo;bootcamp&rdquo; or coding school. We are <strong><em>not</em></strong> recruiters. We actively discourage anyone from getting into the so-called &ldquo;Tech Industry.&rdquo;</p>
+                <p>We <em>are</em> anti-technocapitalists, solarpunks, and radical technologists. Our ethics place us <strong>against</strong> &ldquo;Adtech,&rdquo; &ldquo;Fintech,&rdquo; and Silicon Valley.</p>
+                <p>We <strong><em>do</em></strong> believe <strong>technology is an intangible earth</strong>, with which we can and should have an earthly relationship. It <strong><em>is</em></strong> power that may be harnessed through holistic methods by individuals and their networks for <strong>the empowerment of oneself and of one's  actual communities</strong>.</p>
+                <p>Our approach stands in contrast to isolationism, sterility, and authoritativeness by being <strong>participatory, flexible, and adaptive</strong>. If you are employed by organizations in the Tech Industry, please be advised that <strong>our ideology is hostile to Tech Industry profit motives.</strong></p>
+                <p>We have a strict <strong>no-tolerance policy against bigotry of any kind</strong>. Racism, queerphobia, transphobia, sexism, or any kind of similarly awful behavior will result in immediate removal from the venue and you will not be asked back. Starting arguments that hijack the experience of others or make other people feel less able to learn will result in the same, and this includes being condescending to others.</p>
             </section>
 
             <section id="io-calendar">
                 <h2>Calendar</h2>
                 <div class="h-event vevent">
-                    <h3>Next Event: <span class="p-name">I/O Inaugural in Collaboration with Please Try This at Home</span></h3>
-                    <p>Our next event is <abbr title="2018-03-11T14:00:00" class="dt-start dtstart">Sunday, March 11<sup>th</sup> from 2</abbr>&ndash;<abbr title="2018-03-11T18:00:00" class="dt-end dtend">6pm</abbr> at <abbr class="p-location location" title="465 Seneca Avenue, Ridgewood, Queens, NY 11385">The Footlight</abbr>. <span class="p-description description">Join us for the <span class="p-summary summary">inaugural event of I/O</span>, where we will be setting up a two-way livestream with our friends in Pittsburgh, who will be hosting a mini-conference on biohacking called "<a href="https://pleasetrythispgh.wordpress.com/2018/02/14/queer-cyborgs-wanted/" title="A Collaborative Conference on Radical Bodily Autonomy & Biotechnology" class="u-url url">Please Try This at Home</a>." We will also discuss the future prospects for I/O as a weekly event space, talk a little about our own ethos and trajectory, and talk with attendees about their own interests and projects.</span></p>
-                    <p>This event is: <span class="p-category category">I</span>/<span class="p-category category">O</span>.</p>
+                    <h3>Next Event: <span class="p-name p-summary summary">I/O Inaugural in Collaboration with Please Try This at Home</span></h3>
+                    <p>
+                        Our next event is
+                        <abbr title="2018-03-11T14:00:00" class="dt-start dtstart">Sunday, March 11<sup>th</sup> from 2</abbr>&ndash;<abbr title="2018-03-11T18:00:00" class="dt-end dtend">6pm</abbr>
+                        at <abbr class="p-location location" title="465 Seneca Avenue, Ridgewood, Queens, NY 11385">The Footlight</abbr>.
+                        <span class="p-description description">Join us for the inaugural event of I/O, where we will begin to reimagine our relationships with our digital devices and re-enchant the intangible earth of cyberspace.
+                            We will harness some of this power to share a two-way livestream with our friends in Pittsburgh, who are hosting a mini-conference on biohacking called "<a href="https://pleasetrythispgh.wordpress.com/2018/02/14/queer-cyborgs-wanted/" title="A Collaborative Conference on Radical Bodily Autonomy & Biotechnology" class="u-url url">Please Try This at Home</a>."
+                            There will also be opportunities to talk and meet with fellow participants about their own interests and projects. Come with questions, and bring a laptop or your smartphone to experience first-hand a glimpse into a more optimistic, holistic technological future.</span>
+                    </p>
+                    <p>
+                        This event is:
+                        <span class="p-category category">I</span>/<span class="p-category category">O</span>.
+                    </p>
                 </div><!-- .h-event.vevent -->
                 <footer>
                     <p><a href="http://h2vx.com/ics/https%3A%2F%2Fshiftctrl.space" type="text/calendar">Download our next event to your calendar</a>.</p>
-                    <p>The best way to keep informed about our programs is to subscribe to our calendar:</p>
+                    <p>I/O is one piece of a larger whole. The best way to stay informed about our programs and the programming of our friends and colleagues is to subscribe to our digital calendar:</p>
                     <ol>
-                        <li><a href="https://tech-autonomy.com/calendar" title="Friendly guides on technology autonomy.">Read instructions on syncing our calendar with your device</a></li>
+                        <li><a href="https://tech-autonomy.com/calendar" title="Friendly guides on technology autonomy.">Read instructions on syncing our calendar with your device(s)</a></li>
                         <li><a href="https://oasis.sandstorm.io/shared/ysY5zjj9fbjfwr8smiQ_IQL8jmY2uqyR_65PhNd5wU3" title="View all Shift-Ctrl-Space events.">Our calendar</a></li>
                     </ol>
                 </footer>
