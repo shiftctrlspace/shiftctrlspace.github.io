@@ -140,6 +140,9 @@
             header .h-card {
                 text-align: center;
             }
+            header .h-card .u-photo {
+                display: none;
+            }
             header .h-card .p-street-address {
                 display: block;
             }
@@ -174,15 +177,19 @@
                 </ul>
             </nav>
 
-            <div class="h-card">
+            <div class="h-card vcard">
                 <p>Sundays @ <time datetime="14:00">2</time>&ndash;<time datetime="18:00">6pm</time></p>
-                <p class="p-name p-org"><a href="https://www.thefootlightbar.nyc/" class="p-url">The Footlight</a></p>
-                <address class="h-adr"><a href="https://www.openstreetmap.org/node/5343780579">
-                    <span class="p-street-address">465 Seneca Avenue</span>
-                    <span class="p-extended-address">Ridgewood</span>
-                    <span class="p-locality">Queens</span>, <span class="p-region">NY</span> <span class="p-postal-code">11385</span>
-                    <span class="p-country-name">United States</span>
-                </a></address>
+                <p class="p-name fn p-org org">
+                    <a href="https://www.thefootlightbar.nyc/" class="p-url url">The Footlight</a>
+                    <img src="img/footlight.logo.white-on-black.470x534.png" alt="" class="u-photo photo" />
+                </p>
+                <div class="adr"><address class="h-adr"><a href="https://www.openstreetmap.org/node/5343780579">
+                    <span class="p-street-address street-address">465 Seneca Avenue</span>
+                    <span class="p-extended-address extended-address">Ridgewood</span>
+                    <span class="p-locality locality">Queens</span>, <span class="p-region region">NY</span> <span class="p-postal-code postal-code">11385</span>
+                    <span class="p-country-name country-name">United States</span>
+                </a></address></div>
+                <p>(<a href="http://suda.co.uk/projects/microformats/hcard/get-contact.php?uri=https%3A%2F%2Fshiftctrl.space%2F" title="Download the venue&rsquo;s contact information.">Save venue in address book</a>)</p>
             </div><!-- .h-card -->
         </header>
 
@@ -220,8 +227,9 @@
                         <abbr title="2018-03-11T14:00:00" class="dt-start dtstart">Sunday, March 11<sup>th</sup> from 2</abbr>&ndash;<abbr title="2018-03-11T18:00:00" class="dt-end dtend">6pm</abbr>
                         at <abbr class="p-location location" title="465 Seneca Avenue, Ridgewood, Queens, NY 11385">The Footlight</abbr>.
                         <span class="p-description description">Join us for the inaugural event of I/O, where we will begin to reimagine our relationships with our digital devices and re-enchant the intangible earth of cyberspace.
-                            We will harness some of this power to share a two-way livestream with our friends in Pittsburgh, who are hosting a mini-conference on biohacking called "<a href="https://pleasetrythispgh.wordpress.com/2018/02/14/queer-cyborgs-wanted/" title="A Collaborative Conference on Radical Bodily Autonomy & Biotechnology" class="u-url url">Please Try This at Home</a>."
-                            There will also be opportunities to talk and meet with fellow participants about their own interests and projects. Come with questions, and bring a laptop or your smartphone to experience first-hand a glimpse into a more optimistic, holistic technological future.</span>
+                            We will harness some of this power to share a two-way livestream with our friends in Pittsburgh, who are hosting a mini-conference on biohacking called &ldquo;<a href="https://pleasetrythispgh.wordpress.com/2018/02/14/queer-cyborgs-wanted/" title="A Collaborative Conference on Radical Bodily Autonomy & Biotechnology" class="u-url url">Please Try This at Home</a>.&rdquo;
+                            There will also be opportunities to talk and meet with fellow participants about their own interests and projects. Come with questions, and bring a laptop or your smartphone to experience first-hand a glimpse into a more optimistic, holistic technological future.
+                        </span>
                     </p>
                     <p>
                         This event is:
