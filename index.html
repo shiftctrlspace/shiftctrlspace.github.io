@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>I/O Web Resource</title>
         <style>
- 
             html, body {
                 margin: 0;
                 border: none;
@@ -17,10 +16,17 @@
                 font-family: "D-DIN";
                 src: url("fonts/D-DIN.ttf");
             }
+            ul, ol {
+                margin: 0;
+                padding: 0;
+            }
 
             /**
              * @group Layout.
              */
+            header {
+                margin-top: 2em;
+            }
             #MainColumn {
                 width: 90%;
                 max-width: 60em;
@@ -29,10 +35,11 @@
             }
             #io-calendar footer {
                 text-align: center;
+                padding: 3em 0;
             }
 
             /**
-             * @group Headings.
+             * @group Headings and Typography.
              */
             h1, h2, h3 {
                 color: #000;
@@ -41,6 +48,9 @@
             h1 {
                 font-size: 40px;
                 margin-top: 3em;
+            }
+            header h1 {
+                margin: 0;
             }
             h2 {
                 font-size: 30px;
@@ -57,8 +67,11 @@
                 text-transform: uppercase;
                 font-style: normal;
             }
-            header h1 {
-                margin: 0;
+            footer ol {
+                list-style-type: none;
+            }
+            footer ol a {
+                text-transform: capitalize;
             }
 
             /**
@@ -75,8 +88,6 @@
              * @group Main navigation bar.
              */
             nav ul {
-                margin: 0;
-                padding: 2.5em;
                 text-align: center;
             }
             nav ul li {
@@ -92,6 +103,12 @@
                 margin-top: 1.5em;
                 border: none;
                 font-size: smaller;
+            }
+            @media screen and (max-width: 500px) {
+                nav ul li {
+                    border-left: 0;
+                    display: block;
+                }
             }
 
             /**
@@ -116,10 +133,9 @@
             #logo {
                 display: block;
                 margin: 0 auto 2em;
-                animation-name: fadein;
-                animation-duration: 2s;
+                animation: 2s fade-in;
             }
-            @keyframes fadein {
+            @keyframes fade-in {
                 from { opacity: 0; }
                 to   { opacity: 1; }
             }
@@ -127,7 +143,7 @@
     </head>
     <body>
         <header>
-            <h1><img id="logo" src="img/logo.bw.368x368.gif" alt="I/O Web Resource" height="330" /></h1>
+            <h1><img id="logo" src="img/logo.bw.368x368.gif" alt="I/O Web Resource" height="300" /></h1>
             <nav>
                 <ul>
                     <li><a href="#io-programs" title="What to expect from I/O events.">Programs</a></li>
@@ -188,8 +204,10 @@
                 <footer>
                     <p><a href="http://h2vx.com/ics/https%3A%2F%2Fshiftctrl.space" type="text/calendar">Download our next event to your calendar</a>.</p>
                     <p>The best way to keep informed about our programs is to subscribe to our calendar:</p>
-                    <p><a href="https://tech-autonomy.com/calendar">Click here for instructions on syncing our calendar with your device.</a></p>
-                    <p><a href="https://oasis.sandstorm.io/shared/ysY5zjj9fbjfwr8smiQ_IQL8jmY2uqyR_65PhNd5wU3">Our Calendar</a></p>
+                    <ol>
+                        <li><a href="https://tech-autonomy.com/calendar" title="Friendly guides on technology autonomy.">Read instructions on syncing our calendar with your device</a></li>
+                        <li><a href="https://oasis.sandstorm.io/shared/ysY5zjj9fbjfwr8smiQ_IQL8jmY2uqyR_65PhNd5wU3" title="View all Shift-Ctrl-Space events.">Our calendar</a></li>
+                    </ol>
                 </footer>
             </section>
         </main><!-- #MainColumn -->
