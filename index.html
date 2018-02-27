@@ -5,10 +5,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        <link rel="manifest" href="manifest.json" />
+        <meta name="msapplication-config" content="browserconfig.xml" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
         <meta name="theme-color" content="#ffffff" />
-        <meta name="msapplication-config" content="img/browserconfig.xml" />
+
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
         <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png" />
@@ -22,7 +27,6 @@
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
-        <link rel="manifest" href="img/manifest.json" />
 
         <!--
             Facebook's proprietary Open Graph properties.
@@ -76,6 +80,7 @@
                 margin: 3em auto 0;
                 text-align: left;
             }
+            #WebAppToolbar { display: none; }
             #io-calendar footer {
                 text-align: center;
                 padding: 3em 0;
@@ -137,25 +142,25 @@
             /**
              * @group Main navigation bar.
              */
-            nav ul {
+            #MainNav {
                 text-align: center;
             }
-            nav ul li {
+            #MainNav li {
                 display: inline;
                 padding: 0 30px;
                 border-left: 1px solid #000;
             }
-            nav ul li:first-child {
+            #MainNav li:first-child {
                 border: none;
             }
-            nav ul li:last-child {
+            #MainNav li:last-child {
                 display: none;
                 margin-top: 1.5em;
                 border: none;
                 font-size: smaller;
             }
             @media screen and (max-width: 500px) {
-                nav ul li {
+                #MainNav li {
                     border-left: 0;
                     display: block;
                 }
@@ -189,12 +194,53 @@
                 from { opacity: 0; }
                 to   { opacity: 1; }
             }
+
+            /**
+             * @group Mobile device installed experience.
+             */
+            @media (display-mode: standalone) {
+                #MainNav,
+                header .h-card,
+                #io-intro,
+                #io-programs,
+                #io-ethos,
+                #io-calendar h2 {
+                    display: none;
+                }
+
+                body {
+                    padding-top: 2em;
+                }
+
+                #WebAppToolbar {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                }
+                #WebAppToolbar li {
+                    list-style-type: none;
+                    max-width: 50%;
+                    padding: 3px;
+                    border: 1px dotted black;
+                }
+                #WebAppToolbar li:first-child {
+                    float: left;
+                }
+                #WebAppToolbar li:last-child {
+                    float: right;
+                    text-align: right;
+                }
+                #WebAppToolbar a:hover::after {
+                    content: ": " attr(title);
+                }
         </style>
     </head>
     <body>
         <header>
             <h1><img id="logo" src="img/logo.bw.368x368.gif" alt="I/O Web Resource" height="300" /></h1>
-            <nav>
+            <nav id="MainNav">
                 <ul>
                     <li><a href="#io-programs" title="What to expect from I/O events.">Programs</a></li>
                     <li><a href="#io-ethos" title="Our perspective and sensibilities.">Ethos</a></li>
@@ -273,5 +319,30 @@
                 </footer>
             </section>
         </main><!-- #MainColumn -->
+
+        <nav id="WebAppToolbar">
+            <ul>
+                <li><a href="https://pad.riseup.net/p/shiftctrlspace" title="Share your notes with other note-takers.">Notes &amp; Chat</a></li>
+                <li><a href="https://meet.jit.si/shiftctrlspace-pleasetrythisathome" title="Intercity technomagical viewing tunnel.">Magic Mirror</a></li>
+            </ul>
+        </nav>
+        <script>
+            /**
+             * Changes the videoconference room to a random one, in the given range.
+             *
+             * @param {event} e
+             * @param {number} min
+             * @param {number} max
+             */
+            function randomizeMagicMirrorLink (e, min = 1, max = 5) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                var num = Math.floor(Math.random() * (max - min + 1) + min);
+                var el = document.querySelector('a[href^="https://meet.jit.si/shiftctrlspace-pleasetrythisathome"]');
+                var href = el.getAttribute('href') + '-' + num;
+                el.setAttribute('href', href);
+            }
+            document.addEventListener('DOMContentLoaded', randomizeMagicMirrorLink);
+        </script>
     </body>
 </html>
