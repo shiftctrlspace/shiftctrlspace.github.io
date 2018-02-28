@@ -1,0 +1,10 @@
+# This is a Jekyll configuration file. Jekyll is the static site
+# generator used by GitHub Pages. It is a Free Software application.
+#
+# To learn more about this file, see the user documentation at:
+#
+#     https://jekyllrb.com/docs/configuration/
+#
+
+# Publish the `/.well-known` folder to our site.
+include: [".well-known"]
