@@ -8,3 +8,6 @@
 
 # Publish the `/.well-known` folder to our site.
 include: [".well-known"]
+
+# Don't publish the following paths.
+exclude: ["README.markdown"]
