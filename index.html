@@ -223,6 +223,8 @@
              * @group Mobile device installed experience.
              */
             @media (display-mode: standalone) {
+                body { padding-top: 2em; }
+
                 #MainNav,
                 header .h-card,
                 #io-intro,
@@ -230,10 +232,6 @@
                 #io-ethos,
                 #io-calendar h2 {
                     display: none;
-                }
-
-                body {
-                    padding-top: 2em;
                 }
 
                 #WebAppToolbar {
@@ -259,6 +257,45 @@
                 #WebAppToolbar a:hover::after {
                     content: ": " attr(title);
                 }
+            }
+            /**
+             * These styles repeat due to Mobile Safari's lack of
+             * support for the `display-mode` CSS3 media query. :(
+             *
+             * Remove these once the above is supported in iOS.
+             */
+            body.mobile-safari-webapp { padding-top: 2em; }
+            body.mobile-safari-webapp #MainNav,
+            body.mobile-safari-webapp header .h-card,
+            body.mobile-safari-webapp #io-intro,
+            body.mobile-safari-webapp #io-programs,
+            body.mobile-safari-webapp #io-ethos,
+            body.mobile-safari-webapp #io-calendar h2 {
+                display: none;
+            }
+            body.mobile-safari-webapp #WebAppToolbar {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            body.mobile-safari-webapp #WebAppToolbar li {
+                list-style-type: none;
+                max-width: 50%;
+                padding: 3px;
+                border: 1px solid black;
+            }
+            body.mobile-safari-webapp #WebAppToolbar li:first-child {
+                float: left;
+            }
+            body.mobile-safari-webapp #WebAppToolbar li:last-child {
+                float: right;
+                text-align: right;
+            }
+            body.mobile-safari-webapp #WebAppToolbar a:hover::after {
+                content: ": " attr(title);
+            }
         </style>
     </head>
     <body>
@@ -356,15 +393,27 @@
              *
              * @see https://developer.mozilla.org/en-US/docs/Glossary/IIFE
              */
-            (function { // Begin Immediately-invoked Function Expression
+            (function () { // Begin Immediately-invoked Function Expression
+                /**
+                 * Initialize page behaviors.
+                 *
+                 * Runs when triggered by the `DOMContentLoaded` event.
+                 *
+                 * @param {event} e
+                 */
+                function init (e) {
+                    randomizeMagicMirrorLink();
+                    initMobileSafariWebApp();
+                }
+                document.addEventListener('DOMContentLoaded', init);
+
                 /**
                  * Changes the videoconference room to a random one, in the given range.
                  *
-                 * @param {event} e
                  * @param {number} min
                  * @param {number} max
                  */
-                function randomizeMagicMirrorLink (e, min = 1, max = 5) {
+                function randomizeMagicMirrorLink (min = 1, max = 5) {
                     min = Math.ceil(min);
                     max = Math.floor(max);
                     var num = Math.floor(Math.random() * (max - min + 1) + min);
@@ -372,7 +421,21 @@
                     var href = el.getAttribute('href') + '-' + num;
                     el.setAttribute('href', href);
                 }
-                document.addEventListener('DOMContentLoaded', randomizeMagicMirrorLink);
+
+                /**
+                 * Mimics CSS3 media queries for `display-mode` for iOS support.
+                 */
+                function initMobileSafariWebApp () {
+                    if ( ! navigator.standalone ) {
+                        return; // Not running as installed app, nothing to do.
+                    }
+
+                    var body_class = document.body.getAttribute('class');
+                    body_class = ( body_class && ( -1 < body_class.indexOf('mobile-safari-webapp') ) )
+                        ? body_class + ' mobile-safari-webapp'
+                        : 'mobile-safari-webapp';
+                    document.body.setAttribute('class', body_class);
+                }
             })(); // End IIFE
         </script>
     </body>
