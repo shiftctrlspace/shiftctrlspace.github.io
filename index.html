@@ -36,7 +36,7 @@
 
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png" />
@@ -244,18 +244,20 @@
                 #WebAppToolbar li {
                     list-style-type: none;
                     max-width: 50%;
-                    padding: 3px;
+                    padding: 5px;
                     border: 1px solid black;
+                    border-top: 0;
                 }
                 #WebAppToolbar li:first-child {
                     float: left;
+                    border-left: 0;
+                    border-bottom-right-radius: 10px;
                 }
                 #WebAppToolbar li:last-child {
                     float: right;
                     text-align: right;
-                }
-                #WebAppToolbar a:hover::after {
-                    content: ": " attr(title);
+                    border-right: 0;
+                    border-bottom-left-radius: 10px;
                 }
             }
             /**
@@ -283,18 +285,20 @@
             body.mobile-safari-webapp #WebAppToolbar li {
                 list-style-type: none;
                 max-width: 50%;
-                padding: 3px;
+                padding: 5px;
                 border: 1px solid black;
+                border-top: 0;
             }
             body.mobile-safari-webapp #WebAppToolbar li:first-child {
                 float: left;
+                border-left: 0;
+                border-bottom-right-radius: 10px;
             }
             body.mobile-safari-webapp #WebAppToolbar li:last-child {
                 float: right;
                 text-align: right;
-            }
-            body.mobile-safari-webapp #WebAppToolbar a:hover::after {
-                content: ": " attr(title);
+                border-right: 0;
+                border-bottom-left-radius: 10px;
             }
         </style>
     </head>
