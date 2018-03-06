@@ -352,21 +352,28 @@
         </nav>
         <script>
             /**
-             * Changes the videoconference room to a random one, in the given range.
+             * Create a new scope so as not to pollute the global environment.
              *
-             * @param {event} e
-             * @param {number} min
-             * @param {number} max
+             * @see https://developer.mozilla.org/en-US/docs/Glossary/IIFE
              */
-            function randomizeMagicMirrorLink (e, min = 1, max = 5) {
-                min = Math.ceil(min);
-                max = Math.floor(max);
-                var num = Math.floor(Math.random() * (max - min + 1) + min);
-                var el = document.querySelector('a[href^="https://meet.jit.si/shiftctrlspace-pleasetrythisathome"]');
-                var href = el.getAttribute('href') + '-' + num;
-                el.setAttribute('href', href);
-            }
-            document.addEventListener('DOMContentLoaded', randomizeMagicMirrorLink);
+            (function { // Begin Immediately-invoked Function Expression
+                /**
+                 * Changes the videoconference room to a random one, in the given range.
+                 *
+                 * @param {event} e
+                 * @param {number} min
+                 * @param {number} max
+                 */
+                function randomizeMagicMirrorLink (e, min = 1, max = 5) {
+                    min = Math.ceil(min);
+                    max = Math.floor(max);
+                    var num = Math.floor(Math.random() * (max - min + 1) + min);
+                    var el = document.querySelector('a[href^="https://meet.jit.si/shiftctrlspace-pleasetrythisathome"]');
+                    var href = el.getAttribute('href') + '-' + num;
+                    el.setAttribute('href', href);
+                }
+                document.addEventListener('DOMContentLoaded', randomizeMagicMirrorLink);
+            })(); // End IIFE
         </script>
     </body>
 </html>
