@@ -177,12 +177,6 @@
             #MainNav li:first-child {
                 border: none;
             }
-            #MainNav li:last-child {
-                display: none;
-                margin-top: 1.5em;
-                border: none;
-                font-size: smaller;
-            }
             @media screen and (max-width: 500px) {
                 #MainNav li {
                     border-left: 0;
@@ -310,8 +304,6 @@
                     <li><a href="#io-programs" title="What to expect from I/O events.">Programs</a></li>
                     <li><a href="#io-ethos" title="Our perspective and sensibilities.">Ethos</a></li>
                     <li><a href="#io-calendar" title="When and where our events happen.">Calendar</a></li>
-                    <!-- TODO: Set contact info. -->
-                    <li><a href="#" title="Contact I/O event organizers.">Get in touch</a></li>
                 </ul>
             </nav>
 
@@ -328,7 +320,7 @@
                     <span class="p-country-name country-name">United States</span>
                 </a></address></div>
                 <p>(<a href="http://suda.co.uk/projects/microformats/hcard/get-contact.php?uri=https%3A%2F%2Fshiftctrl.space%2F" title="Download the venue&rsquo;s contact information.">Save venue in address book</a>)</p>
-            </div><!-- .h-card -->
+            </div><!-- .h-card.vcard -->
         </header>
 
         <main id="MainColumn" role="main">
@@ -338,13 +330,13 @@
                 <p>Each week, we set a space where we as individuals and small organizations become more aware of the power in our everyday tech and personal devices, and practice utilizing that power <strong>for the betterment of our lives and communities</strong>.</p>
                 <p>Our events are <strong>free to attend, with a suggested donation of $10</strong>.</p>
                 <p>Here you will find links to helpful resources, as well as <a href="#io-calendar">instructions on how to subscribe to our calendar of events</a>.</p>
-            </section>
+            </section><!-- #io-intro -->
 
             <section id="io-programs">
                 <h2>Our Programs</h2>
                 <p>We host programs <strong>(nearly) every Sunday from <time datetime="14:00">2</time>&ndash;<time datetime="18:00">6pm</time></strong> at <a href="https://www.thefootlightbar.nyc/">The Footlight</a>, located at  <a href="https://www.openstreetmap.org/search?query=465%20Seneca%20Avenue%2C%20Ridgewood%2C%20Queens%2C%20NY%2011385">465 Seneca Avenue in Ridgewood, Queens, New York</a>. We alternate between programming that is generally oriented towards Individuals (I) and programming that is generally oriented towards organizations (O) or collectives.</p>
                 <p>Of course, anyone can attend either type of gathering &mdash; this distinction is made only to help you scope what you would like to attend, and the things you would like to learn. When the topic appeals to both, the event will be marked &ldquo;I/O.&rdquo;</p>
-            </section>
+            </section><!-- #io-programs -->
 
             <section id="io-ethos">
                 <h2>Our Ethos</h2>
@@ -354,7 +346,7 @@
                 <p>We <strong><em>do</em></strong> believe <strong>technology is an intangible earth</strong>, with which we can and should have an earthly relationship. It <strong><em>is</em></strong> power that we can harness through holistic methods as individuals and cooperative networks for <strong>the empowerment of oneself and of one&rsquo;s  actual communities</strong>.</p>
                 <p>Our approach stands in contrast to isolationism, sterility, and authoritarianism by being <strong>participatory, flexible, and adaptive</strong>. If you are employed by organizations in the Tech Industry, please be advised that <strong>our ideology is hostile to Tech Industry profit motives.</strong></p>
                 <p>We have a strict <strong>no-tolerance policy against bigotry of any kind</strong>. Racism, queerphobia, transphobia, sexism, or any kind of similarly awful behavior will result in immediate removal from the venue and you will not be asked back. Starting arguments that hijack the experience of others or make other people feel less able to learn will result in the same, and this includes being condescending to others.</p>
-            </section>
+            </section><!-- #io-ethos -->
 
             <section id="io-calendar">
                 <h2>Calendar</h2>
@@ -382,7 +374,7 @@
                         <li><a href="https://oasis.sandstorm.io/shared/ysY5zjj9fbjfwr8smiQ_IQL8jmY2uqyR_65PhNd5wU3" title="View all Shift-Ctrl-Space events.">Our calendar</a></li>
                     </ol>
                 </footer>
-            </section>
+            </section><!-- #io-calendar -->
         </main><!-- #MainColumn -->
 
         <nav id="WebAppToolbar">
@@ -398,19 +390,6 @@
              * @see https://developer.mozilla.org/en-US/docs/Glossary/IIFE
              */
             (function () { // Begin Immediately-invoked Function Expression
-                /**
-                 * Initialize page behaviors.
-                 *
-                 * Runs when triggered by the `DOMContentLoaded` event.
-                 *
-                 * @param {event} e
-                 */
-                function init (e) {
-                    randomizeMagicMirrorLink();
-                    initMobileSafariWebApp();
-                }
-                document.addEventListener('DOMContentLoaded', init);
-
                 /**
                  * Changes the videoconference room to a random one, in the given range.
                  *
@@ -440,6 +419,19 @@
                         : 'mobile-safari-webapp';
                     document.body.setAttribute('class', body_class);
                 }
+
+                /**
+                 * Initialize page behaviors.
+                 *
+                 * Runs when triggered by the `DOMContentLoaded` event.
+                 *
+                 * @param {event} e
+                 */
+                function init (e) {
+                    randomizeMagicMirrorLink();
+                    initMobileSafariWebApp();
+                }
+                document.addEventListener('DOMContentLoaded', init);
             })(); // End IIFE
         </script>
     </body>
