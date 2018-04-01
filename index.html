@@ -485,21 +485,6 @@
              */
             (function () { // Begin Immediately-invoked Function Expression
                 /**
-                 * Changes the videoconference room to a random one, in the given range.
-                 *
-                 * @param {number} min
-                 * @param {number} max
-                 */
-                function randomizeMagicMirrorLink (min = 1, max = 5) {
-                    min = Math.ceil(min);
-                    max = Math.floor(max);
-                    var num = Math.floor(Math.random() * (max - min + 1) + min);
-                    var el = document.querySelector('a[href^="https://meet.mayfirst.org/shiftctrlspacepleasetrythisathome"]');
-                    var href = el.getAttribute('href') + num;
-                    el.setAttribute('href', href);
-                }
-
-                /**
                  * Mimics CSS3 media queries for `display-mode` for iOS support.
                  */
                 function initMobileSafariWebApp () {
@@ -522,7 +507,6 @@
                  * @param {event} e
                  */
                 function init (e) {
-                    randomizeMagicMirrorLink();
                     initMobileSafariWebApp();
                 }
                 document.addEventListener('DOMContentLoaded', init);
