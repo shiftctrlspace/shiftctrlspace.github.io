@@ -104,7 +104,10 @@
                 margin: 3em auto 0;
                 text-align: left;
             }
-            #WebAppToolbar { display: none; }
+            #WebAppToolbar,
+            #qr-code-wifi {
+                display: none;
+            }
             #io-calendar footer {
                 text-align: center;
                 padding: 3em 0;
@@ -259,6 +262,15 @@
                     border-right: 0;
                     border-bottom-left-radius: 10px;
                 }
+
+                #qr-code-wifi {
+                    display: block;
+                    text-align: center;
+                }
+                #qr-code-wifi img {
+                    display: block;
+                    margin: 0 auto;
+                }
             }
             /**
              * These styles repeat due to Mobile Safari's lack of
@@ -300,6 +312,14 @@
                 text-align: right;
                 border-right: 0;
                 border-bottom-left-radius: 10px;
+            }
+            body.mobile-safari-webapp #qr-code-wifi {
+                display: block;
+                text-align: center;
+            }
+            body.mobile-safari-webapp #qr-code-wifi img {
+                display: block;
+                margin: 0 auto;
             }
 
             /**
@@ -454,6 +474,10 @@
                             <span class="p-category category">I<span class="hidden">ndividuals</span></span>/<span class="p-category category">O<span class="hidden">rganizations</span><span>.
                         </p>
                     </div><!-- .p-description.description -->
+                    <p id="qr-code-wifi">
+                        Scan this <abbr title="Quick and Reliable">QR</abbr> code to connect to the event's Wi-Fi network:
+                        <img src="img/qr-code.wifi.Shift-CTRL%20Space.148x148.gif" alt="QR code for connecting to the Shift-CTRL Space Wi-Fi." />
+                    </p>
                 </div><!-- .h-event.vevent -->
                 <footer>
                     <p><a href="http://h2vx.com/ics/https%3A%2F%2Fshiftctrl.space" type="text/calendar">Download our next event to your calendar</a>.</p>
