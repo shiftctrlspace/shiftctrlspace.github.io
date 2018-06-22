@@ -93,6 +93,16 @@ section:first-of-type {
 section:last-of-type {
     border-radius: 0 0 3em 3em;
 }
+li {
+    list-style-type: none;
+    position: relative;
+}
+li::before {
+    position: absolute;
+    left: -1.5em;
+    content: "\25EC";
+    font-size: .8em;
+}
 
 @media screen and (min-width: 690px) {
     body {
@@ -197,12 +207,29 @@ a:hover {
                 <h2>Pwn the night!</h2>
                 <div class="e-content p-description description">
                     <p>
-                        <dfn>Hacker Trivia Night</dfn> is a semi-regular evening of cooperative Jeopardy-style cybersecurity quizzes featuring drinks and prizes for the winning teams. Scored in real-time on an open source <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">Capture the Flag (CTF) gaming system</a>, Hacker Trivia Night highlights computer  and information security principles and practices. This is your classic bar trivia game hyperlinked into the 21<sup>st</sup> century.
+                        <dfn>Hacker Trivia Night</dfn> is a semi-regular evening of cooperative Jeopardy-style cybersecurity quizzes featuring drinks and prizes for the winning teams.
+                    </p>
+                    <p>
+                        Scored in real-time on an open source <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">Capture the Flag (CTF) gaming system</a>, Hacker Trivia Night highlights computer  and information security principles and practices. This is your classic bar trivia game hyperlinked into the 21<sup>st</sup> century.
                     </p>
                     <p>Always free to play!</p>
                     <h3>Rules</h3>
                     <ul>
-                        <li>Searching for quiz answers on your phone during the game is <em>allowed</em>. If you don&rsquo;t know it, search for it!</li>
+                        <li>
+                            <p>
+                                Searching for quiz answers on your phone during the game is <em>allowed</em>. If you don&rsquo;t know it, search for it!
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                No attacking the game infrastructure. If bugs or vulnerabilities are found, please alert the game organizers immediately.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Absolutely no sabotaging of other teams, or in any way hindering their independent progress.
+                            </p>
+                        </li>
                     </ul>
                 </div>
             </section><!-- #about -->
