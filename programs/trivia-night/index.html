@@ -15,7 +15,7 @@
 body {
     background: #000;
     color: #79DBA8;
-    font: 14px CallingCode, Monospace;
+    font: 16px CallingCode, Monospace;
 }
 h1 {
     position: relative;
@@ -31,12 +31,30 @@ h3,
     padding: 0;
     text-align: center;
 }
+#Masthead p {
+    font-size: 14px;
+}
 p {
     line-height: 1.25em;
 }
-#next-event-banner {
-    padding: 0.5em;
+#next-event {
+    padding: 1em;
     text-align: center;
+}
+a[href^="http://h2vx.com/ics/"] {
+    display: inline-block;
+    border: .15em solid yellow;
+    border-radius: 5px;
+    padding: .5em;
+    color: yellow;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a[href^="http://h2vx.com/ics/"]:hover {
+    border: .15em solid yellow;
+    color: #000;
+    background: yellow;
 }
 #PageFooter {
     font-size: xx-small;
@@ -113,18 +131,13 @@ section:last-of-type {
 /**
  * @group Links
  */
-a,
-a:hover {
-    color: #ed5c0d;
-    text-decoration-color: #17ccb2;
+a {
+    color: #EEE;
+    text-decoration: none;
 }
 a:hover {
-    text-decoration: overline;
-    text-decoration-color: #17ccb2;
-}
-#Masthead a {
-    color: #000;
-    text-decoration-color: #17ccb2;
+    border-bottom: 1px dotted yellow;
+    text-decoration: none;
 }
         </style>
     </head>
@@ -186,10 +199,10 @@ a:hover {
                     <p>
                         <dfn>Hacker Trivia Night</dfn> is a semi-regular evening of cooperative Jeopardy-style cybersecurity quizzes featuring drinks and prizes for the winning teams. Scored in real-time on an open source <a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">Capture the Flag (CTF) gaming system</a>, Hacker Trivia Night highlights computer  and information security principles and practices. This is your classic bar trivia game hyperlinked into the 21<sup>st</sup> century.
                     </p>
-                    <p>Always free to attend and participate!</p>
+                    <p>Always free to play!</p>
                     <h3>Rules</h3>
                     <ul>
-                        <li>Searching for quiz answers on your phone is <em>allowed</em>. If you don&rsquo;t know it, search for it! (That&rsquo;s what real hackers do.)</li>
+                        <li>Searching for quiz answers on your phone during the game is <em>allowed</em>. If you don&rsquo;t know it, search for it!</li>
                     </ul>
                 </div>
             </section><!-- #about -->
@@ -197,15 +210,13 @@ a:hover {
             <section id="next-event">
                 <h2>Next Hacker Trivia Night:</h2>
                 <div class="e-content">
-                    <div id="next-event-banner">
-                        <p>
-                            <abbr title="2018-07-07T19:00:00-04:00" class="dt-start dtstart">Saturday, July 7<sup>th</sup> 2018 from 7:00pm</abbr>&ndash;<abbr title="2018-07-07T21:00:00-04:00" class="dt-end dtend">9:00pm</abbr>
-                            at <abbr class="p-location location" title="214 Starr Street, Brooklyn, NY 11237">Starr Bar</abbr>.
-                        </p>
-                        <p>
-                            <a href="http://h2vx.com/ics/https%3A%2F%2Fshiftctrl.space%2Fprograms%2Ftrivia-night%2F">Download Event Info To Your Calendar</a>
-                        </p>
-                    </div><!-- #next-event-banner -->
+                    <p>
+                        <abbr title="2018-07-07T19:00:00-04:00" class="dt-start dtstart">Saturday, July 7<sup>th</sup> 2018 from 7:00pm</abbr>&ndash;<abbr title="2018-07-07T21:00:00-04:00" class="dt-end dtend">9:00pm</abbr>
+                        at <abbr class="p-location location" title="214 Starr Street, Brooklyn, NY 11237">Starr Bar</abbr>.
+                    </p>
+                    <p>
+                        <a href="http://h2vx.com/ics/https%3A%2F%2Fshiftctrl.space%2Fprograms%2Ftrivia-night%2F">Add to calendar</a>
+                    </p>
                 </div><!-- .e-content -->
             </section><!-- #next-event -->
         </div><!-- .h-event.vevent --></main>
