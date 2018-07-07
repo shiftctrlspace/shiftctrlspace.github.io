@@ -41,7 +41,11 @@ p {
     padding: 1em;
     text-align: center;
 }
-a[href^="http://h2vx.com/ics/"] {
+.icon {
+    width: 1em;
+}
+a[href^="http://h2vx.com/ics/"],
+a[href^="webcal://h2vx.com/ics/"] {
     display: inline-block;
     border: .15em solid yellow;
     border-radius: 5px;
@@ -51,10 +55,17 @@ a[href^="http://h2vx.com/ics/"] {
     text-decoration: none;
     text-transform: uppercase;
 }
-a[href^="http://h2vx.com/ics/"]:hover {
+a[href^="webcal://h2vx.com/ics/"] img {
+    filter: invert(100%);
+}
+a[href^="http://h2vx.com/ics/"]:hover,
+a[href^="webcal://h2vx.com/ics/"]:hover {
     border: .15em solid yellow;
     color: #000;
     background: yellow;
+}
+a[href^="webcal://h2vx.com/ics/"]:hover img {
+    filter: invert(0);
 }
 #PageFooter {
     font-size: xx-small;
@@ -216,7 +227,7 @@ a:hover {
                         Always free to play!
                     </p>
                     <p>
-                        Before you attend, you need to know that <strong>we strictly enforce several lightweight <a href="https://github.com/AnarchoTechNYC/meta/wiki/Social-rules">social rules</a></strong>. In brief: racism, queerphobia, transphobia, sexism, capitalist advocacy, “brogrammer,” “manarchist,” or any kind of similarly awful behavior will not be tolerated and you and your team will be immediately ejected from the game. This is judged at the sole discretion of the game organizer. Never take a learning opportunity away from another participant, no matter how smart you need everyone to think you are.
+                        Before you attend, you need to know that <strong>we strictly enforce several lightweight <a href="https://github.com/AnarchoTechNYC/meta/wiki/Social-rules">social rules</a></strong>. In brief: racism, queerphobia, transphobia, sexism, capitalist advocacy, &ldquo;brogrammer,&rdquo; &ldquo;anarchist,&rdquo; or any kind of similarly awful behavior will not be tolerated and you and your team will be immediately ejected from the game. This is judged at the sole discretion of the game organizer. Never take a learning opportunity away from another participant, no matter how smart you need everyone to think you are.
                     </p>
                 </div>
             </section><!-- #about -->
@@ -257,7 +268,12 @@ a:hover {
                         at <abbr class="p-location location" title="214 Starr Street, Brooklyn, NY 11237"><a href="https://starrbar.com/">Starr Bar</a></abbr> (<a href="https://www.openstreetmap.org/node/5550525387" title="View this location on a map.">map</a>).
                     </p>
                     <p>
-                        <a href="http://h2vx.com/ics/https%3A%2F%2Fshiftctrl.space%2Fprograms%2Ftrivia-night%2F">Add to calendar</a>
+                        <a href="webcal://h2vx.com/ics/https%3A%2F%2Fshiftctrl.space%2Fprograms%2Ftrivia-night%2F">
+                            <img class="icon" src="img/icon.calendar.svg" alt="Subscribe" />
+                        </a>
+                        <a href="http://h2vx.com/ics/https%3A%2F%2Fshiftctrl.space%2Fprograms%2Ftrivia-night%2F">
+                            Add to calendar
+                        </a>
                     </p>
                 </div><!-- .e-content -->
             </section><!-- #next-event -->
