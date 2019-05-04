@@ -189,7 +189,8 @@
             /**
              * @group Event venue info.
              */
-            header .h-card {
+            header .h-card,
+            header > p {
                 text-align: center;
             }
             header .h-card .u-photo {
@@ -410,20 +411,38 @@
                 </ul>
             </nav>
 
-            <div class="h-card vcard">
-                <p>Sundays @ <time datetime="14:30">2:30</time>&ndash;<time datetime="18:00">6pm</time></p>
-                <p class="p-name fn p-org org">
-                    <a href="https://www.thefootlightbar.nyc/" class="p-url url" title="Visit the venue&rsquo;s website.">The Footlight</a>
-                    <img src="img/footlight.logo.white-on-black.470x534.png" alt="" class="u-photo photo" />
-                </p>
-                <div class="adr"><address class="h-adr"><a href="https://www.openstreetmap.org/node/5343780579" title="View this venue on OpenStreetMap.org">
-                    <span class="p-street-address street-address">465 Seneca Avenue</span>
-                    <span class="p-extended-address extended-address">Ridgewood</span>,
-                    <span class="p-locality locality">Queens</span>, <span class="p-region region">NY</span> <span class="p-postal-code postal-code">11385</span>
-                    <span class="p-country-name country-name">United States</span>
-                </a></address></div>
-                <p>(<a href="http://suda.co.uk/projects/microformats/hcard/get-contact.php?uri=https%3A%2F%2Fshiftctrl.space%2F" title="Download the venue&rsquo;s contact information.">Save venue in address book</a>)</p>
-            </div><!-- .h-card.vcard -->
+            <p>Sundays @ <time datetime="14:30">2:30</time>&ndash;<time datetime="18:00">6pm</time></p>
+            <ul id="venues">
+                <li>
+                    <div class="h-card vcard">
+                        <p class="p-name fn p-org org">
+                            <a href="https://thefootlightbar.nyc/" class="p-url url" title="Visit the venue&rsquo;s website.">The Footlight</a>
+                            <img src="img/footlight.logo.white-on-black.470x534.png" alt="" class="u-photo photo" />
+                        </p>
+                        <div class="adr"><address class="h-adr"><a href="https://www.openstreetmap.org/node/5343780579" title="View this venue on OpenStreetMap.org">
+                            <span class="p-street-address street-address">465 Seneca Avenue</span>
+                            <span class="p-extended-address extended-address">Ridgewood</span>,
+                            <span class="p-locality locality">Queens</span>, <span class="p-region region">NY</span> <span class="p-postal-code postal-code">11385</span>
+                            <span class="p-country-name country-name">United States</span>
+                        </a></address></div>
+                    </div><!-- .h-card.vcard -->
+                </li>
+                <li>
+                    <div class="h-card vcard">
+                        <p class="p-name fn p-org org">
+                            <a href="https://milmundosbooks.com/" class="p-url url" title="Visit the venue&rsquo;s website.">Mil Mundos Bookstore</a>
+                            <img src="img/logo.mil-mundos-bookstore.80x80.png" alt="" class="u-photo photo" />
+                        </p>
+                        <div class="adr"><address class="h-adr"><a href="https://www.openstreetmap.org/node/6292075853" title="View this venue on OpenStreetMap.org">
+                            <span class="p-street-address street-address">308 Irving Avenue</span>
+                            <span class="p-extended-address extended-address">Brooklyn</span>,
+                            <span class="p-locality locality">Queens</span>, <span class="p-region region">NY</span> <span class="p-postal-code postal-code">11237</span>
+                            <span class="p-country-name country-name">United States</span>
+                        </a></address></div>
+                    </div><!-- .h-card.vcard -->
+                </li>
+            </ul>
+            <p>(<a href="http://suda.co.uk/projects/microformats/hcard/get-contact.php?uri=https%3A%2F%2Fshiftctrl.space%2F" title="Download the venue&rsquo;s contact information.">Save venues in address book</a>)</p>
         </header>
 
         <main id="MainColumn" role="main">
@@ -437,7 +456,7 @@
 
             <section id="io-programs">
                 <h2>Our Programs</h2>
-                <p>We host programs <strong>(nearly) every Sunday from <time datetime="14:30">2:30</time>&ndash;<time datetime="18:00">6pm</time></strong> at <a href="https://www.thefootlightbar.nyc/">The Footlight</a>, located at  <a href="https://www.openstreetmap.org/search?query=465%20Seneca%20Avenue%2C%20Ridgewood%2C%20Queens%2C%20NY%2011385">465 Seneca Avenue in Ridgewood, Queens, New York</a>. We alternate between programming that is generally oriented towards Individuals (I) and programming that is generally oriented towards organizations (O) or collectives.</p>
+                <p>We host programs <strong>(nearly) every Sunday from <time datetime="14:30">2:30</time>&ndash;<time datetime="18:00">6pm</time></strong> at <a href="#venues">one of several locally-owned venues</a>. We alternate between programming that is generally oriented towards Individuals (I) and programming that is generally oriented towards organizations (O) or collectives.</p>
                 <p>Of course, anyone can attend either type of gathering &mdash; this distinction is made only to help you scope what you would like to attend, and the things you would like to learn. When the topic appeals to both, the event will be marked &ldquo;I/O.&rdquo;</p>
             </section><!-- #io-programs -->
 
